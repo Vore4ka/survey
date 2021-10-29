@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body class="bg-light py-3 py-lg-5">
+
+    <div class="container">
+
+      <div class="text-center">
+        <h1 class="display-4">Вы дед инсайд или у вас реально депрессия</h1>
+        <p class="lead">Собираем статистику дед инсайдиков, Ваши персональные данные не будут никому переданы (хаха заскамила)</p>
+      </div>
+
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button type="button" class="nav-link w-100 h4 mb-0 active" id="step-1-tab" data-bs-toggle="tab" data-bs-target="#step-1" role="tab" aria-controls="step-1" aria-selected="true">
+            <h2>Шаг 1</h2>
+            <p>Персональная информация</p>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button type="button" class="nav-link w-100 h4 mb-0" id="step-2-tab" data-bs-toggle="tab" data-bs-target="#step-2" role="tab" aria-controls="step-2" aria-selected="false">
+            <h2>Шаг 2</h2>
+            <p>Вопросы с вариантами ответов</p>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button type="button" class="nav-link w-100 h4 mb-0" id="step-3-tab" data-bs-toggle="tab" data-bs-target="#step-3" role="tab" aria-controls="step-3" aria-selected="false">
+            <h2>Шаг 3</h2>
+            <p>Оценочные вопросы</p>
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade pt-4 show active" id="step-1" role="tabpanel" aria-labelledby="step-1-tab">
+          
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label class="form-label">Пол:</label>
+              <div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sex" id="sex-male" value="male">
+                  <label class="form-check-label" for="sex-male">
+                    Мужской
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="sex" id="sex-female" value="female">
+                  <label class="form-check-label" for="sex-female">
+                    Женский
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="age" class="form-label">Возраст:</label>
+              <input type="number" class="form-control" id="age" aria-describedby="age">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Телефон:</label>
+              <input type="tel" class="form-control" id="phone" aria-describedby="phone">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name" class="form-label">Имя:</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="example@mail.ru">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-9 mb-3">
+              <label for="address" class="form-label">Адрес:</label>
+              <input type="text" class="form-control" id="address" aria-describedby="address" placeholder="Улица Пушкина, 12А">
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="floor" class="form-label">Квартира:</label>
+              <input type="number" class="form-control" id="floor" aria-describedby="floor" placeholder="1">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="city" class="form-label">Город:</label>
+              <input type="text" class="form-control" id="city" aria-describedby="city" placeholder="Москва">
+            </div>
+            <div class="col-md-2 mb-3">
+              <label for="zip" class="form-label">Индекс:</label>
+              <input type="text" class="form-control" id="zip" aria-describedby="zip" placeholder="123123">
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="country" class="form-label">Страна</label>
+              <input class="form-control" list="countryOptions" id="country" placeholder="-Выберите страну-">
+              <datalist id="countryOptions">
+                <option value="Россия">
+                <option value="Украина">
+                <option value="Белоруссия">
+                <option value="Казахстан">
+                <option value="Польша">
+              </datalist>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-secondary">Шаг 2</button>
+          </div>
+        </div>
+
+
+
+        <div class="tab-pane fade pt-4 show" id="step-2" role="tabpanel" aria-labelledby="step-2-tab">
+          <h2 class="h5 text-center mb-3">Вопрос 1. Вы живете в России?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/city.jpg" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">Это не Россия к сожалению</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-1">
+                <label class="form-check-label" for="flexRadioDefault1-1">
+                  Да, живу в хорошем месте
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-2">
+                <label class="form-check-label" for="flexRadioDefault1-2">
+                  Да, живу на помойке
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-3">
+                <label class="form-check-label" for="flexRadioDefault1-3">
+                  РОССИЯЯЯ СВЯЩЕННАЯЯЯАЯ НААААШААА ДЕРЖАВАААА
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-4">
+                <label class="form-check-label" for="flexRadioDefault1-4">
+                  Нет, ура ура
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-5">
+                <label class="form-check-label" for="flexRadioDefault1-5">
+                  Не важно (лол страна на прошлой странице указывалась)
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-6" value="">
+                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Другое">
+                <p><small class="text-muted">Если ни один из ответов не подходит, Вы можете ввести свой собственный в поле сверху</small></p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h2 class="h5 text-center mb-3">Вопрос 2. Вы верите в Бога?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/god.jpg" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">Аче</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2-1">
+                <label class="form-check-label" for="flexRadioDefault2-1">
+                  Да
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2-2">
+                <label class="form-check-label" for="flexRadioDefault2-2">
+                  Нет
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2-3">
+                <label class="form-check-label" for="flexRadioDefault2-3">
+                  Это кто (who)
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2-4">
+                <label class="form-check-label" for="flexRadioDefault2-4">
+                  Только в бога абсолюта!!!
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2-5">
+                <label class="form-check-label" for="flexRadioDefault2-5">
+                  Не решил(а)
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-6" value="">
+                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Другое">
+                <p><small class="text-muted">Если ни один из ответов не подходит, Вы можете ввести свой собственный в поле сверху</small></p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h2 class="h5 text-center mb-3">Вопрос 3. У Вас есть отец?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/father.jpg" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">Фотография НАСТОЯЩЕГО отца!!! ШОК!!</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-3">
+                <label class="form-check-label" for="flexRadioDefault3-1">
+                  Да
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3-2">
+                <label class="form-check-label" for="flexRadioDefault3-2">
+                  Нет
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3-3">
+                <label class="form-check-label" for="flexRadioDefault3-3">
+                  У меня их два
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3-4">
+                <label class="form-check-label" for="flexRadioDefault3-4">
+                  Ушел за хлебом
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3-5">
+                <label class="form-check-label" for="flexRadioDefault3-5">
+                  Моя мама всегда считала, что мужики не нужны, ответ очевиден
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-6" value="">
+                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Другое">
+                <p><small class="text-muted">Если ни один из ответов не подходит, Вы можете ввести свой собственный в поле сверху</small></p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h2 class="h5 text-center mb-3">Вопрос 4. Вы были на приеме у психолога (психотерапевта, психиатра, психопата)?</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <figure class="figure">
+                <img src="img/psy.jpg" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">Психологи - это хорошо!</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4-1">
+                <label class="form-check-label" for="flexRadioDefault4-1">
+                  Да, он помог мне
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4-2">
+                <label class="form-check-label" for="flexRadioDefault4-2">
+                  Да, он сказал, что моя жизнь гавно и взял за сеанс 50000
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4-3">
+                <label class="form-check-label" for="flexRadioDefault4-3">
+                  Нет, к ним ходят только слабаки!
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4-4">
+                <label class="form-check-label" for="flexRadioDefault4-4">
+                  Нет, все равно уже не поможет
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4-5">
+                <label class="form-check-label" for="flexRadioDefault4-5">
+                  Я сам психолог...
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1-6" value="">
+                <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Другое">
+                <p><small class="text-muted">Если ни один из ответов не подходит, Вы можете ввести свой собственный в поле сверху</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-secondary">Шаг 3</button>
+          </div>
+        </div>
+
+
+        <div class="tab-pane fade pt-4 show" id="step-3" role="tabpanel" aria-labelledby="step-3-tab">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 5. Сколько приблизительно у Вас близких друзей?</h2>
+              <p>Если реально больше пяти (вау), укажите в комментариях</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-between mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-1" value="option1">
+                  <label class="form-check-label" for="questionRadio5-1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-2" value="option2">
+                  <label class="form-check-label" for="questionRadio5-2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-3" value="option3">
+                  <label class="form-check-label" for="questionRadio5-3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-4" value="option4">
+                  <label class="form-check-label" for="questionRadio5-4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-5" value="option5">
+                  <label class="form-check-label" for="questionRadio5-5">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio5-6" value="option6">
+                  <label class="form-check-label" for="questionRadio5-6">Затрудняюсь ответить</label>
+                </div>
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion5-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 6. Насколько хорошо Вы сегодня выспались?</h2>
+              <p>Да, такое бывают, некоторые люди действительно высыпаются</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-between mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-1" value="option1">
+                  <label class="form-check-label" for="questionRadio6-1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-2" value="option2">
+                  <label class="form-check-label" for="questionRadio6-2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-3" value="option3">
+                  <label class="form-check-label" for="questionRadio6-3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-4" value="option4">
+                  <label class="form-check-label" for="questionRadio6-4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-5" value="option5">
+                  <label class="form-check-label" for="questionRadio6-5">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="questionRadioOptions" id="questionRadio6-6" value="option6">
+                  <label class="form-check-label" for="questionRadio6-6">Затрудняюсь ответить</label>
+                </div>
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion6-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 7. Насколько Вы токсик?</h2>
+              <p>Быть токсиком не всегда плохо</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <div class="btn-group btn-group-lg w-100">
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-1" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-1">1</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-2" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-2">2</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-3" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-3">3</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-4" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-4">4</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-5" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-5">5</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio7-6" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio7-6">Затрудняюсь ответить</label>
+                </div>
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion7-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 8. Сколько видов наркотиков Вы пробовали?</h2>
+              <p>Если больше пяти, напишите в комментарии, а еще напишите какие. Сравним вкусы :) :) :)</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                <div class="btn-group btn-group-lg w-100">
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-1" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-1">1</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-2" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-2">2</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-3" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-3">3</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-4" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-4">4</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-5" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-5">5</label>
+                  <input type="radio" class="btn-check" name="options" id="questionRadio8-6" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="questionRadio8-6">Затрудняюсь ответить</label>
+                </div>
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion8-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 9. Насколько Вы счастливы?</h2>
+              <p>Хоть раз испытывали вообще такое чувство?</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                  <input type="range" class="form-range" id="question9" min="1" max="5">
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion8-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row mb-3">
+            <div class="col-lg-6">
+              <h2 class="h5">Вопрос 10. Оцените творчество инстасамки</h2>
+              <p>Мамми на долар ж*** на сайте кэш</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-3">
+                  <input type="range" class="form-range" id="question10" min="1" max="5">
+              </div>
+              <label class="visually-hidden" for="ratingRadioQuestion5-comment">Комментарий:</label>
+              <textarea class="form-control form-control-sm" id="ratingRadioQuestion8-comment" name="ratingRadioQuestion5" rows="3" placeholder="Напишите свой комментарий, если есть"></textarea>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary" onclick="window.location.href = 'results.html';">Готово</button>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
